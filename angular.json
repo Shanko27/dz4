@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "dz4"
+    }
+  },
+  "defaultProject": "dz4",
+  "cli": {
+    "analytics": "d704ed30-9cab-4640-8f7c-f904920cfe55"
+  }
 }
