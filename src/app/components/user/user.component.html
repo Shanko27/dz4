@@ -1,6 +1,7 @@
 <div>
   <div>
-    {{user.id}} - {{user.name}}
+    {{user.id}} - {{user.name}} {{user.username}}
   </div>
   <hr>
+  <button [routerLink]="['details', user.id]">details</button>
 </div>
