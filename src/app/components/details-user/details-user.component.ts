@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {UserService} from '../../service/user.service';
 import {DetalPost} from '../../models/detalPost';
 import {PostService} from '../../service/post.service';
@@ -14,10 +14,10 @@ export class DetailsUserComponent implements OnInit {
   detailedPostt: DetalPost;
 detailedUser;
 
-  constructor(private activatedRoute: ActivatedRoute,
-              private userService: UserService, private postService: PostService) {
+  constructor(private router: Router,  private activatedRoute: ActivatedRoute, private postService: PostService
+              ) {
     this.activatedRoute.params.subscribe((params) => {
-      this.userService.getUserId(params.id).subscribe(user => this.detailedUser = user);
+      this.detailedUser = history.state.yyy;
       this.postService.getPostId(params.id).subscribe(post => this.detailedPostt = post);
     });
   }
