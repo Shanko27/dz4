@@ -20,6 +20,7 @@ detailedUser;
       this.detailedUser = history.state.yyy;
       this.postService.getPostId(params.id).subscribe(post => this.detailedPostt = post);
     });
+    this.activatedRoute.queryParams.subscribe(value => this.detailedUser = value);
   }
 
   ngOnInit(): void {
