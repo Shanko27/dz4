@@ -3,6 +3,6 @@
     {{user.id}} - {{user.name}} {{user.username}}
   </div>
 
-  <button [routerLink]="['details', user.id]" [state]="{yyy: user}">details</button>
+  <button (click)="ShowUser(user)">details</button>
   <hr>
 </div>
